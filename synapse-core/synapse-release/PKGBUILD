@@ -1,0 +1,24 @@
+# Maintainer: Synapse Project
+
+pkgname=synapse-release
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Synapse OS system identity and branding files"
+arch=('any')
+license=('MIT')
+
+
+package() {
+  # system identity
+  install -Dm644 "$srcdir/os-release" "$pkgdir/usr/lib/os-release"
+
+  # compatibility copy (common in distros)
+  install -Dm644 "$srcdir/os-release" "$pkgdir/etc/os-release"
+
+  # login banners
+  install -Dm644 "$srcdir/issue" "$pkgdir/etc/issue"
+  install -Dm644 "$srcdir/issue.net" "$pkgdir/etc/issue.net"
+
+  # branding
+  install -Dm644 "$srcdir/synapse-logo.png" "$pkgdir/usr/share/pixmaps/synapse-logo.png"
+}
