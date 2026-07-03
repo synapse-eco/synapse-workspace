@@ -1,0 +1,21 @@
+[SddmGreeterTheme]
+Name=Synapse Genesis
+Description=Synapse OS Genesis SDDM Theme (Synapse OS 0.1.0-alpha)
+Author=Aromal J
+Maintainer=Aromal J
+Copyright=(c) 2026 Synapse Project
+License=GPL-3
+Type=sddm-theme
+Version=0.1.0-alpha
+Website=https://github.com/synapse-eco/
+Screenshot=assets/ui/preview.png
+MainScript=Main.qml
+ConfigFile=theme.conf
+TranslationsDirectory=translations
+Email=(add-maintainer-email@domain)
+Theme-Id=synapse-genesis
+Project=Synapse OS
+Project-Version=0.1.0-alpha
+Maintainer-URL=https://github.com/synapse-eco/
+Theme-API=2.0
+QtVersion=6

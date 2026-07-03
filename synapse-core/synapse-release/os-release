@@ -1,0 +1,22 @@
+NAME="Synapse OS"
+PRETTY_NAME="Synapse OS 0.1.0 Alpha (Genesis)"
+ID=synapse
+BUILD_ID=rolling
+
+VERSION_ID="0.1.0-alpha"
+VERSION_CODENAME="Genesis"
+
+HOME_URL="https://github.com/synapse-eco"
+DOCUMENTATION_URL="https://github.com/synapse-eco"
+SUPPORT_URL="mailto:aromal.synapse.systems@gmail.com"
+BUG_REPORT_URL="https://github.com/synapse-eco/issues"
+PRIVACY_POLICY_URL="https://github.com/synapse-eco"
+
+LOGO=synapse_logo
+
+ANSI_COLOR="38;2;41;122;197"
+
+DEFAULT_HOSTNAME="synapse"
+
+VENDOR_NAME="Synapse Project"
+VENDOR_URL="https://github.com/synapse-eco"

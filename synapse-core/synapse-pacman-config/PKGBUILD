@@ -1,0 +1,14 @@
+pkgname=synapse-pacman-glich
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Synapse Linux pacman configuration"
+arch=('any')
+depends=('pacman')
+
+source=("pacman.conf")
+
+sha256sums=('ebbcf9ef2844262f3f3d9b4cae383155987a457c2be493fc7919bd1a91600b5d')
+
+package() {
+    install -Dm644 "pacman.conf" "$pkgdir/etc/pacman.conf"
+}

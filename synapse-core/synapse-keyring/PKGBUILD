@@ -1,0 +1,30 @@
+pkgname=synapse-keyring
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Keyring for Synapse OS package signing keys"
+arch=('any')
+url="https://github.com/Synapse-OS/synapse-keyring"
+license=('GPL3')
+
+install="${pkgname}.install"
+
+source=(
+    'synapse.gpg'
+    'synapse-trusted'
+    'synapse-revoked'
+)
+
+sha256sums=('580f8839dafccb8064ea58b65f36faa0eb97aed4c756c640389221ef5782f775'
+            'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+            'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
+
+package() {
+    install -Dm644 synapse.gpg \
+        "${pkgdir}/usr/share/pacman/keyrings/synapse.gpg"
+
+    install -Dm644 synapse-trusted \
+        "${pkgdir}/usr/share/pacman/keyrings/synapse-trusted"
+
+    install -Dm644 synapse-revoked \
+        "${pkgdir}/usr/share/pacman/keyrings/synapse-revoked"
+}

@@ -1,0 +1,14 @@
+{
+    "KPlugin": {
+        "Id": "synapse-wallpapers",
+        "Name": "Synapse Wallpapers",
+        "Description": "Official wallpaper collection for Synapse OS.",
+        "Version": "0.1.0",
+        "Author": "Aromal",
+        "License": "GPL-3.0-or-later",
+        "Website": "https://github.com/synapse-eco",
+        "Category": "Wallpapers",
+        "Icon": "preferences-desktop-wallpaper"
+    },
+    "X-Plasma-API": "5.0"
+}

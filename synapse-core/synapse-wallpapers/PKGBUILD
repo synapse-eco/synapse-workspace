@@ -1,0 +1,19 @@
+pkgname=synapse-wallpaper
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Official Synapse OS wallpapers"
+arch=('any')
+license=('custom:proprietary')
+
+source=("Synapse-Genesis.tar.gz")
+sha256sums=('c6cefd5ebeca1f71c1a9c0e50d24250e370d8df5571d35676c8675040dac6431')
+
+package() {
+    install -d "$pkgdir/usr/share/wallpapers/Synapse-Genesis"
+    cp -a "$srcdir/Synapse-Genesis/"* \
+        "$pkgdir/usr/share/wallpapers/Synapse-Genesis/"
+
+    install -d "$pkgdir/usr/share/backgrounds/Synapse-Genesis"
+    cp -a "$srcdir/Synapse-Genesis/"* \
+        "$pkgdir/usr/share/backgrounds/Synapse-Genesis/"
+}

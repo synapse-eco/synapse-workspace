@@ -1,0 +1,46 @@
+pkgname=synapse-branding
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Synapse OS branding files"
+arch=('any')
+license=('custom:proprietary')
+install=synapse-branding.install
+
+source=(
+    'synapse-logo.png'
+    'synapse-logo-text.png'
+    'LICENSE'
+    'synapse-installer.desktop'
+    'README.md'
+)
+
+sha256sums=('9ad43d38e0adfd92e2add1a8ad2ced82d2e5f823823bcb41a3df902c233f5914'
+            'a735fde1804d2928b0dc562f6a5606e3925207a584bbabf07f8144798e2ef471'
+            'e6be9b0b565775755aa49528aef8d7b14ebeedf26b446db5a723520e132d0128'
+            '986a3fe4ba08c7ce7eb1d8470e59f043320becca21d58757b1e06289beb2c9d8'
+            'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855')
+
+package() {
+    # Pixmaps
+    install -Dm644 "$srcdir/synapse-logo.png" \
+        "$pkgdir/usr/share/pixmaps/synapse-logo.png"
+
+    install -Dm644 "$srcdir/synapse-logo-text.png" \
+        "$pkgdir/usr/share/pixmaps/synapse-logo-text.png"
+
+    # Desktop entry
+    install -Dm644 "$srcdir/synapse-installer.desktop" \
+        "$pkgdir/usr/share/applications/synapse-installer.desktop"
+
+    # Documentation
+    install -Dm644 "$srcdir/README.md" \
+        "$pkgdir/usr/share/doc/synapse/README.md"
+
+    # License
+    install -Dm644 "$srcdir/LICENSE" \
+        "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+
+    # Icons
+    install -d "$pkgdir/usr/share/icons"
+    cp -a "$startdir/hicolor" "$pkgdir/usr/share/icons/"
+}

@@ -1,0 +1,27 @@
+pkgname=synapse-boot
+pkgver=0.1.0
+pkgrel=1
+pkgdesc="Boot configuration templates for Synapse OS"
+arch=('any')
+license=('GPL-3.0-or-later')
+
+source=(
+    "loader.conf"
+    "cmdline"
+    "synapse.conf.in"
+)
+
+sha256sums=('0689cd27788258a344740bbf6d84a66e979c107a3df588f5c58e9f1603d17f2e'
+            'b13a33366fffbb590f86f6ed9ba1aa2310e5a1b1fa60b8551309fc92cb2518ba'
+            'f559bb9b13b12ce563418a9a1362936f7285e601fbd3eedf7504f640b23fa7e2')
+
+package() {
+    install -Dm644 "$srcdir/loader.conf" \
+        "$pkgdir/boot/loader/loader.conf"
+
+    install -Dm644 "$srcdir/cmdline" \
+        "$pkgdir/etc/kernel/cmdline"
+
+    install -Dm644 "$srcdir/synapse.conf.in" \
+        "$pkgdir/usr/share/synapse/boot/synapse.conf.in"
+}
