@@ -1,0 +1,27 @@
+# Maintainer: Synapse OS
+pkgname=synapse-kde-defaults
+pkgver=1.0.0
+pkgrel=1
+pkgdesc="Default KDE Plasma configuration files for Synapse OS"
+arch=('any')
+url="https://synapseos.org"
+license=('custom')
+depends=()
+makedepends=()
+backup=()
+options=('!strip')
+install=()
+source=()
+
+package() {
+  install -Dm644 "${SRCDEST}/kdeglobals" "${pkgdir}/etc/skel/.config/kdeglobals"
+  install -Dm644 "${SRCDEST}/kwinrc" "${pkgdir}/etc/skel/.config/kwinrc"
+  install -Dm644 "${SRCDEST}/kscreenlockerrc" "${pkgdir}/etc/skel/.config/kscreenlockerrc"
+  install -Dm644 "${SRCDEST}/kglobalshortcutsrc" "${pkgdir}/etc/skel/.config/kglobalshortcutsrc"
+  install -Dm644 "${SRCDEST}/kcminputrc" "${pkgdir}/etc/skel/.config/kcminputrc"
+  install -Dm644 "${SRCDEST}/konsolerc" "${pkgdir}/etc/skel/.config/konsolerc"
+  install -Dm644 "${SRCDEST}/dolphinrc" "${pkgdir}/etc/skel/.config/dolphinrc"
+  install -Dm644 "${SRCDEST}/spectaclerc" "${pkgdir}/etc/skel/.config/spectaclerc"
+  install -Dm644 "${SRCDEST}/plasmarc" "${pkgdir}/etc/skel/.config/plasmarc"
+  install -Dm644 "${SRCDEST}/plasma-org.kde.plasma.desktop-appletsrc" "${pkgdir}/etc/skel/.config/plasma-org.kde.plasma.desktop-appletsrc"
+}

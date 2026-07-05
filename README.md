@@ -1,66 +1,39 @@
 # Synapse Workspace
 
-The Synapse Workspace is the primary development environment for **Synapse OS**. It contains the package sources, PKGBUILDs, and project structure used to build the operating system.
+The **Synapse Workspace** is the primary development repository of the Synapse ecosystem.
 
-This repository is intended for developers and contributors.
+It serves as the central engineering workspace where the Synapse operating system and its supporting components are actively designed, developed, integrated, and maintained.
 
-## Repository Structure
+## Purpose
 
-```text
-synapse-workspace/
-├── synapse-core/
-├── synapse-desktop/
-└── synapse-extra/
-```
+This repository is responsible for:
 
-### synapse-core
+* Developing the Synapse operating system.
+* Maintaining the project's source code.
+* Implementing new features and system components.
+* Integrating stable designs into the development workflow.
+* Preparing software for packaging and release.
 
-Contains essential packages required for the base operating system.
+## Scope
 
-Examples include:
+The contents of this repository may include:
 
-* release and branding packages
-* system configuration
-* base utilities
-* core operating system components
+* Operating system source code
+* Build and packaging scripts
+* Configuration files
+* Development tools
+* Project documentation
+* Supporting infrastructure
 
-### synapse-desktop
+As the Synapse ecosystem evolves, the structure of this repository will expand to accommodate new components and development workflows.
 
-Contains desktop environment packages, themes, applications, and user interface components.
+## Development Philosophy
 
-### synapse-extra
+The Synapse Workspace is intended to remain the authoritative development environment for the Synapse ecosystem.
 
-Contains optional packages that are not required for a minimal Synapse OS installation.
+All code committed to this repository should contribute directly to the implementation, maintenance, or evolution of Synapse as a production-quality operating system.
 
-## Building Packages
+---
 
-Each package is maintained as a standard Arch Linux `PKGBUILD`.
-
-To build a package:
-
-```bash
-cd <package-directory>
-makepkg -si
-```
-
-## Repository Workflow
-
-1. Modify or create a package.
-2. Build the package using `makepkg`.
-3. Copy the generated package into the Synapse package repository.
-4. Update the repository database using `repo-add`.
-5. Commit and push both the workspace and repository.
-
-## Project Status
-
-Current development stage:
-
-**Genesis (Alpha)**
-
-The project is under active development and package layouts, repository structure, and workflows may evolve.
-
-## License
-
-Each package may define its own license.
-
-Unless otherwise specified, source files in this repository are licensed under the MIT License.
+**Synapse Workspace**
+Primary development repository for the Synapse ecosystem.
